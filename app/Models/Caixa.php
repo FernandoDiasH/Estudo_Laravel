@@ -42,6 +42,10 @@ class Caixa extends Model
         return $this->where('id', $id)->update(['situacao'=> 1]);
     }
 
+    public function getNomeCaixa($nome){
+       return $this->where('nome', 'like','%'. $nome. '%')->get();
+    }
+
 }
 
 

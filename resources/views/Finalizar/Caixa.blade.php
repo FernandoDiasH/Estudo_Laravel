@@ -9,8 +9,7 @@
 
     @if(session('msg')) <div class="alert alert-success">{{ session('msg') }}</div> @endif
 
-
-
+    
     <form action="{{ route('caixa.finalizar', $getCaixa->id) }}" method="POST">
         @csrf
         <div class="row">

@@ -6,6 +6,17 @@
 @section('content')
 
 <h1>Solicitações de Caixa</h1>
+<form action="{{route('busca')}}" method="post">
+    @csrf
+    <div class="row">
+            <div class="col-4">
+                <label for="buscarSolicitacao" class="form-label ">Buscar Solicitação</label>
+                <input class="form-control" type="search" name="nome" id="nome" placeholder="Digite um nome">
+                <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+                <a href="{{route('listarCaixa')}}" class="btn btn-secondary mt-3">Voltar</a>
+            </div>
+    </div>
+</form>
 
     <table class="table teble-hover mt-3">
         <div class="row">

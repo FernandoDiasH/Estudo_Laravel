@@ -59,6 +59,7 @@ Route::prefix('solicitacao')->group(function(){
 
 Route::prefix('Listar')->group(function(){
     Route::get('caixa', [CaixaController::class, 'showListarCaixa'])->name('listarCaixa');
+    Route::post('bucar', [CaixaController::class, 'buscarNome'])->name('busca');
 
 });
 
