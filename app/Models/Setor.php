@@ -16,7 +16,9 @@ class Setor extends Model
 
     public function getSetores()
     {
-        return $this->select('id', 'setor')->orderby('id', 'asc')->get();
+        return $this->all();
+
+        //return $this->select('id', 'setor')->orderby('id', 'asc')->get();
     }
 
     public function getSetor($id){

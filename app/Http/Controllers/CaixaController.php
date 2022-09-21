@@ -45,4 +45,11 @@ class CaixaController extends Controller
         return redirect('Listar/caixa')->with('msg', 'Cadastrado com sucesso');
 
    }
+   public function buscarNome(Caixa $caixa, Request $request){
+       $caixas = $caixa->getNomeCaixa($request->nome);
+
+
+
+        return view('listar.caixa', compact('caixas'));
+   }
 }

@@ -15,7 +15,7 @@ class Fornecedor extends Model
 
    public function getSuppliers()
    {
-       return $this->select('id', 'fornecedores')->orderBy('fornecedores', 'asc')->get();
+       return $this->all();
    }
 
    public function deletarFornecedor($id){
