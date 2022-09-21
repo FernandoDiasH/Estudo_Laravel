@@ -15,7 +15,7 @@ class Categoria extends Model
 
     public function getCategorias()
     {
-        return $this->select('id', 'categorias')->orderby('id', 'asc')->get();
+        return $this->all();
     }
 
     public function deletarCategoria($id){
