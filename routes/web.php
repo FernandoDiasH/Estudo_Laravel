@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CaixaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\FornecedorController;
@@ -35,7 +36,7 @@ Route::prefix('setor')->group(function(){
 
 Route::prefix('categoria')->group(function(){
     Route::get('/',[CategoriaController::class, 'showCategoria'])->name('categoria');
-    Route::post('/', [CategoriaController::class, 'cadastrarCategoria'])->name('categoria.create');
+    Route::post('/create', [CategoriaController::class, 'cadastrarCategoria'])->name('categoria.create');
     Route::get('editar/{id}', [CategoriaController::class, 'showEditarCategoria'])->name('categoria.showEditar');
     Route::post('editar', [CategoriaController::class, 'editarCategoria'])->name('categoria.editar');
     Route::delete('delete/{id}', [CategoriaController::class, 'deletarCategoria'])->name('categoria.delete');

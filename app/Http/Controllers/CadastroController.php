@@ -11,7 +11,14 @@ use App\models\Fornecedor;
 
 class CadastroController extends Controller
 {
+    public function show(Request $request){
 
+
+        //return json_encode(array("nome" => $request->all()));
+
+        return $request;
+
+    }
 
 
 
