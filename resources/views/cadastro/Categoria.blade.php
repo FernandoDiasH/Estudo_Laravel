@@ -13,10 +13,10 @@
 
     @if(session('msg')) <div class="alert alert-success">{{ session('msg') }}</div> @endif
 
-    <form action="{{route('categoria.create')}}" class="row" method="post">
+    <form class="row" id="formCategoria">
         <div class="col-4">
             @csrf
-            <label for="setor" class="form-label">Setor </label>
+            <label for="categorias" class="form-label">Categoria </label>
             <input type="text" class="form-control" name="categorias" id="categorias">
 
              <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
@@ -49,5 +49,5 @@
     </div>
 
 </div>
-
+<script src="/js/categoria.js"></script>
 @endsection

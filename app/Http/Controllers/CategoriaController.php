@@ -17,7 +17,7 @@ class CategoriaController extends Controller
     public function cadastrarCategoria(CategoriaRequest $request){
 
         Categoria::create($request->validated());
-        return redirect()->back()->with('msg', 'Cadastrado com sucesso');
+        return json_encode(array("msg" => 'cadastrado com sucesso'));
     }
 
     public function deletarCategoria(Categoria $categoria, $id){
