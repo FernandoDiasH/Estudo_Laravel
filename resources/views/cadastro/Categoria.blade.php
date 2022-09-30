@@ -45,9 +45,20 @@
                     </tr>
                 </form>
             @endforeach
+
         </table>
     </div>
 
 </div>
+
+<div class="container">
+    {{ $categorias->links() }}
+</div>
+
+    <h1 class="mt-3">Area de teste</h1>
+
+    <button class="btn btn-primary" id="teste">Teste</button>
+
+
 <script src="/js/categoria.js"></script>
 @endsection

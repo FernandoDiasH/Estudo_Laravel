@@ -64,6 +64,8 @@ Route::prefix('Listar')->group(function(){
 
 });
 
+Route::post('teste',[CategoriaController::class, 'teste'])->name('teste');
+
 
 
 
