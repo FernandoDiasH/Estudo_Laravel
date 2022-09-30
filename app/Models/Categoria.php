@@ -15,7 +15,7 @@ class Categoria extends Model
 
     public function getCategorias()
     {
-        return $this->all();
+        return $this->paginate(10);
     }
 
     public function deletarCategoria($id){

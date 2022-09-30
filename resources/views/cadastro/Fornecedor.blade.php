@@ -48,5 +48,7 @@
         </table>
     </div>
 
+    {{$fornecedores->links()}}
+
 </div>
 @endsection

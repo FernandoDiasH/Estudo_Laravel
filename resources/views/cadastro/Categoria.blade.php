@@ -48,6 +48,8 @@
         </table>
     </div>
 
+    {{$categorias->links()}}
+
 </div>
 <script src="/js/categoria.js"></script>
 @endsection

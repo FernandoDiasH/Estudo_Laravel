@@ -23,7 +23,7 @@ class CaixaFactory extends Factory
             'nome'=> fake()->name(),
             'valorSolicitado'=>fake()->randomFloat(2, 1, 500),
             'descricao'=>fake()->sentence(),
-            
+
         ];
     }
 }

@@ -40,9 +40,11 @@
 
                 </tr>
              @endforeach
-            </div>
+        </div>
     </table>
-
+    @if ($paginacao)
+        {{$caixas->links()}}
+    @endif
 
 
 

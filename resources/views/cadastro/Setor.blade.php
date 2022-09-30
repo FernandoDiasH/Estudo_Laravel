@@ -47,6 +47,7 @@
             @endforeach
         </table>
     </div>
+    {{$setores->links()}}
 
 </div>
 @endsection

@@ -31,7 +31,7 @@ class Caixa extends Model
                             'setores.setor',
                             'solicitacao_caixa.descricao',
                             'solicitacao_caixa.valorSolicitado'
-                            )->where('solicitacao_caixa.situacao', 2)->orderBy('dataSolicitada', 'asc')->get();
+                            )->where('solicitacao_caixa.situacao', 2)->orderBy('dataSolicitada', 'asc')->paginate(5);
     }
 
     public function getCaixa($id){
@@ -44,6 +44,11 @@ class Caixa extends Model
 
     public function getNomeCaixa($nome){
        return $this->where('nome', 'like','%'. $nome. '%')->get();
+    }
+
+    public function valorCaixaAberto(){
+
+        
     }
 
 }

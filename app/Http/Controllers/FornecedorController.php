@@ -10,6 +10,7 @@ class FornecedorController extends Controller
 {
     public function showFornecedor(Fornecedor $fornecedor){
         $fornecedores = $fornecedor->getSuppliers();
+        
         return view('cadastro/Fornecedor', compact('fornecedores'));
     }
 

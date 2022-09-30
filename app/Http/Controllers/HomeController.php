@@ -9,7 +9,6 @@ class HomeController extends Controller
 {
     public function show(Caixa $caixa){
         $caixa = $caixa->caixaAberto();
-       
 
         return view('index', compact('caixa'));
     }

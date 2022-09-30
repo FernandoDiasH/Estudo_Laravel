@@ -15,7 +15,7 @@ class Fornecedor extends Model
 
    public function getSuppliers()
    {
-       return $this->all();
+       return $this->paginate(10);
    }
 
    public function deletarFornecedor($id){

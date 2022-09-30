@@ -28,7 +28,8 @@ class CaixaController extends Controller
 
    public function showListarCaixa(Caixa $caixa){
         $caixas = $caixa->getCaixas();
-       return view('listar.caixa', compact('caixas'));
+        $paginacao = true;
+       return view('listar.caixa', compact('caixas', 'paginacao'));
    }
 
    public function showFinalizarSolicitacao(Caixa $caixa, $id){
@@ -47,9 +48,10 @@ class CaixaController extends Controller
    }
    public function buscarNome(Caixa $caixa, Request $request){
        $caixas = $caixa->getNomeCaixa($request->nome);
+       $paginacao = false;
 
 
 
-        return view('listar.caixa', compact('caixas'));
+        return view('listar.caixa', compact('caixas','paginacao'));
    }
 }
